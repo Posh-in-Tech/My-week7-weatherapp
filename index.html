@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>iSimo se Zulu</title>
     <link rel="stylesheet" href="src/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,20 +16,26 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="search-form-input"
+            id="search-form-input"
           />
-          <input type="submit" value="Search" class="search-form-button" />
+          <input
+            type="submit"
+            value="Search"
+            class="search-form-button"
+            id="search-form-button"
+          />
         </form>
       </header>
       <main>
         <div class="weather-app-data">
           <div>
-            <h1 class="weather-app-city">Welcome to iSimo se Zulu</h1>
+            <h1 class="weather-app-city" id="city"></h1>
             <p class="weather-app-details">
               Tuesday 15:29, scatter clouds
               <br />
@@ -37,7 +44,7 @@
           </div>
           <div class="weather-app-temperature-container">
             <div class="weather-app-icon">☀️</div>
-            <div class="weather-app-temperature">12</div>
+            <div class="weather-app-temperature" id="temperature"></div>
             <div class="weather-app-unit">°C</div>
           </div>
         </div>
@@ -53,5 +60,6 @@
         <a href="#">Netlify</a>
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
